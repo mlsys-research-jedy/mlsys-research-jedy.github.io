@@ -14,7 +14,7 @@
             font-family: "Times New Roman", "SimHei", "黑体", "Microsoft YaHei", serif;
             max-width: 1000px;
             margin: 30px auto;
-            padding: 0 40px;   /* 增加左右内边距，使内容不贴边 */
+            padding: 0 30px 0 15px;   /* 左边距减小，整体左移 */
             line-height: 1.6;
             color: #1e1e2f;
             background-color: #fafafa;
@@ -39,29 +39,19 @@
             margin-bottom: 0.6em;
             color: #2c3e50;
         }
-        /* 列表样式：保留项目符号，但增加左侧缩进 */
+        /* 普通列表：使用原生圆点，缩进调小，圆点与文字间距适中 */
         ul {
-            list-style: none;
-            padding-left: 0;
+            list-style-type: disc;
+            padding-left: 1.5em;   /* 控制整体缩进，圆点位置随之前移，但圆点与文字间距默认 */
+            margin: 0;
         }
         ul li {
-            margin-bottom: 0.5em;
-            padding-left: 1.8em;   /* 调整缩进，使项目符号与文字距离适中 */
-            text-indent: -1.8em;   /* 与 padding-left 保持一致 */
+            margin-bottom: 0.4em;
         }
-        ul li::before {
-            content: "•";
-            color: #2c3e50;
-            font-weight: bold;
-            display: inline-block;
-            width: 1.8em;
-            margin-left: -1.8em;
-        }
-        /* 论文条目特殊样式，同样调整缩进 */
+        /* 论文条目（不使用圆点） */
         .paper-item {
             margin-bottom: 0.9em;
-            padding-left: 1.8em;
-            text-indent: -1.8em;
+            padding-left: 0;       /* 无额外缩进 */
         }
         .paper-item .authors {
             font-weight: normal;
@@ -71,10 +61,12 @@
             text-decoration: underline;
         }
         .paper-item .venue {
-            color: #000080;   /* 深蓝色 */
+            color: #000080;   /* 深蓝色期刊名 */
         }
-        .paper-item .highlight {
-            font-weight: normal;   /* 不再加粗，因为括号内容已统一 */
+        /* 论文分类标注：加粗、深红色 */
+        .paper-item .ccf {
+            font-weight: bold;
+            color: #8B0000;   /* 深红色 */
         }
         .bold {
             font-weight: bold;
@@ -85,9 +77,6 @@
         .italic {
             font-style: italic;
         }
-        .blue-venue {
-            color: #000080;
-        }
         .footer {
             margin-top: 2.5em;
             border-top: 1px solid #ddd;
@@ -97,7 +86,8 @@
             text-align: center;
         }
         @media (max-width: 600px) {
-            body { padding: 0 20px; }
+            body { padding: 0 15px 0 10px; }
+            ul { padding-left: 1.2em; }
         }
     </style>
 </head>
@@ -121,165 +111,198 @@
     <!-- ==================== Research Area ==================== -->
     <div class="section">
         <div class="section-title">❤️ Research Area</div>
-        <p style="padding-left:1.8em;">大模型计算系统、高性能计算、计算机体系结构</p>
+        <p style="padding-left:1.5em;">大模型计算系统、高性能计算、计算机体系结构</p>
+    </div>
+
+    <!-- ==================== Recent Rewards ==================== -->
+    <div class="section">
+        <div class="section-title">🏅 Recent Rewards</div>
+        <ul>
+            <li>中国科学院计算技术研究所2023年度优秀研究人员（2024年）</li>
+            <li>ACM SIGHPC CHINA新星奖（2023年）</li>
+            <li>Best Paper Award (Runner Up) of MICRO 2022（2022年）</li>
+            <li>ACM SIGHPC CHINA优秀博士论文奖（2021年）</li>
+            <li>华为云与计算先锋教师（2021年）</li>
+            <li>清华秋季校二等奖学金（2016年）</li>
+        </ul>
+    </div>
+
+    <!-- ==================== 科研项目 ==================== -->
+    <div class="section">
+        <div class="section-title">👥 科研项目</div>
+        <ul>
+            <li><span class="bold">国家自然基金委面上项目</span>，大模型自动化超参数调优的扩展性研究，<span class="bold">主持</span>，2024年～2027年</li>
+            <li><span class="bold">校企合作</span>，面向滴滴业务场景的大模型推理框架性能评测方法研究，<span class="bold">主持</span>，2026年</li>
+            <li><span class="bold">中央高校人才基金</span>，面向高效自动化机器学习的关键技术研究，<span class="bold">主持</span>，2024年～2027年</li>
+            <li><span class="bold">自然科学横向项目</span>，自动驾驶碰撞检测漏洞挖掘ICSFuzz算法开发，参与</li>
+            <li><span class="bold">自然科学横向项目</span>，智慧康养金融服务系统项目，参与</li>
+            <li><span class="bold">自然科学横向项目</span>，铁路客运电梯维保智能监测技术研究，参与</li>
+            <li><span class="bold">自然科学横向项目</span>，铁路局基于北斗时空信息服务的规模应用示范-智能化地理信息要素数据清洗研究，参与</li>
+            <li><span class="bold">自然科学横向项目</span>，数据科学课程技术支持-北京联创拓值科技有限公司，参与</li>
+            <li><span class="bold">自然科学横向项目</span>，北斗时空信息服务管理及融合应用关键技术研究，参与</li>
+            <li><span class="bold">自然科学横向项目</span>，面向异构算力的模型计算图切分方法研究，参与</li>
+            <li><span class="bold">自然科学横向项目</span>，基于可微表征技术的三维场景感知与重建研究，参与</li>
+            <li><span class="bold">国家任务</span>，xxxx设计，参与</li>
+            <li><span class="bold">战略性先导</span>，xxxx关键技术，参与</li>
+            <li><span class="bold">国家自然基金委面上项目</span>，资源全局共享的存储阵列关键技术研究，参与</li>
+            <li><span class="bold">科技部973课题</span>，网络大数据计算系统架构体系与评价方法研究，参与</li>
+        </ul>
     </div>
 
     <!-- ==================== Selected Publications ==================== -->
     <div class="section">
         <div class="section-title">📖 Selected Publications</div>
-        <ul style="list-style:none; padding-left:0;">
-            <!-- 每篇论文的括号内容已统一为 (计算机系统/高性能计算，CCF X) 或无CCF -->
-            <li class="paper-item">
-                <span class="authors"><span class="self">Xiaqing Li</span>, Qi Guo, Guangyan Zhang, Siwei Ye, Guanhua He, Yiheng Yao, Yifan Hao, Zidong Du, Weimin Zheng</span>.
-                "FastTuning: Enabling Fast and Efficient Hyper-Parameter Tuning with Partitioning and Parallelism of Search Space," 
-                <span class="venue">IEEE Transactions on Parallel and Distributed Systems (TPDS)</span>, Volume:35, Issue:7, Pages:1174-1188, July 2024.
-                <span class="highlight">（计算机系统/高性能计算，CCF A）</span>
-            </li>
-            <li class="paper-item">
-                <span class="authors"><span class="self">Xiaqing Li</span>, Guangyan Zhang, Weimin Zheng</span>.
-                "SmartTuning: Selecting HyperParameters of a ConvNet System for Fast Training and Small Working Memory," 
-                <span class="venue">IEEE Transactions on Parallel and Distributed Systems (TPDS)</span>, Volume: 32, Issue: 7, Pages: 1690-1701, July 2021.
-                <span class="highlight">（计算机系统/高性能计算，CCF A）</span>
-            </li>
-            <li class="paper-item">
-                <span class="authors"><span class="self">Xiaqing Li</span>, Guangyan Zhang, Zhufan Wang, Weimin Zheng</span>.
-                "HyConv: Accelerating Multi-phase CNN Computation by Fine-grained Policy Selection," 
-                <span class="venue">IEEE Transactions on Parallel and Distributed Systems (TPDS)</span>, Volume: 30, Issue: 2, Pages: 388-399, Feb. 2019.
-                <span class="highlight">（计算机系统/高性能计算，CCF A）</span>
-            </li>
-            <li class="paper-item">
-                <span class="authors"><span class="self">Xiaqing Li</span>, Guangyan Zhang, H. Howie Huang, Zhufan Wang, Weimin Zheng</span>.
-                "Performance Analysis of GPU-based Convolutional Neural Networks," in 
-                <span class="venue">45th International Conference on Parallel Processing (ICPP-2016)</span>, Philadelphia, PA USA, August 2016.
-                <span class="highlight">（计算机系统/高性能计算，CCF B）</span>
-            </li>
-            <li class="paper-item">
-                <span class="authors"><span class="self">Xiaqing Li</span>, Guangyan Zhang, Keqin Li, Weimin Zheng</span>.
-                "Deep learning and its parallel acceleration techniques," in 
-                <span class="venue">Big Data: Principles and Paradigms</span>, Morgan Kaufmann/Elsevier, 2015.
-                <span class="highlight">（计算机系统/高性能计算）</span>
-            </li>
-            <li class="paper-item">
-                <span class="authors">Zhengyang Lyu, <span class="self">Xiaqing Li</span>, Zidong Du, Rui Zhang, Qi Guo</span>.
-                "LE-Timing: Layout-Aware and Explainable Timing Prediction," in 
-                <span class="venue">ACM Transactions on Design Automation of Electronic Systems</span>, Just Accepted, May 2026.
-                <span class="highlight">（计算机系统/高性能计算，CCF B）</span>
-            </li>
-            <li class="paper-item">
-                <span class="authors">Wenkai He, <span class="self">Xiaqing Li</span>, Xinkai Song, Yifan Hao, Rui Zhang, Zidong Du, Yunji Chen</span>.
-                "Chip design with machine learning: a survey from algorithm perspective," 
-                <span class="venue">Science China Information Science (SCIS)</span>, Oct 19, 2023.
-                <span class="highlight">（计算机系统/高性能计算，CCF A）</span>
-            </li>
-            <li class="paper-item">
-                <span class="authors">Zhengyang Lv, <span class="self">Xiaqing Li</span>, Zidong Du, Qi Guo</span>.
-                "Explainable and Layout-Aware Timing Prediction," 
-                <span class="venue">2024 ACM/IEEE International Conference on Computer-Aided Design (ICCAD-2024)</span>, Volume:35, July 2024.
-                <span class="highlight">（计算机系统/高性能计算，CCF B）</span>
-            </li>
-            <li class="paper-item">
-                <span class="authors">Jun Bi, <span class="self">Xiaqing Li</span>, Qi Guo, Rui Zhang, Yuanbo Wen, Xing Hu, Zidong Du, Xinkai Song, Yifan Hao, Yunji Chen</span>.
-                "BALTO: Efficient Tensor Program Optimization with Diversity-Based Active Learning," 
-                <span class="venue">International Conference on Learning Representations (ICLR 2023)</span>.
-                <span class="highlight">（计算机系统/高性能计算，CCF A）</span>
-            </li>
-            <li class="paper-item">
-                <span class="authors">Feiyu Yao, Zhixiong Niu, <span class="self">Xiaqing Li</span>, Yongqiang Xiong, Juan Fang, Qian Wang</span>.
-                "An Efficient Hybrid Sparse Attention with CPU-GPU Parallelism for Long-Context Inference," in 
-                <span class="venue">CoRR</span>, abs/2605.07719, 2026.
-                <span class="highlight">（计算机系统/高性能计算）</span>
-            </li>
-            <li class="paper-item">
-                <span class="authors">Jianhang Xie, Chuntao Ding, <span class="self">Xiaqing Li</span>, Shenyuan Ren, Yidong Li, Zhichao Lu</span>.
-                "NestQuant: Post-Training Integer-Nesting Quantization for On-Device DNN," 
-                <span class="venue">IEEE Transactions on Mobile Computing (TMC)</span>, 2025.
-                <span class="highlight">（计算机系统/高性能计算，CCF A）</span>
-            </li>
-            <li class="paper-item">
-                <span class="authors">Zhexing Zhang, Yuanbo Wen, Hanqi Lyu, Chang Liu, Rui Zhang, <span class="self">Xiaqing Li</span>, Chao Wang, Zidong Du, Qi Guo, Ling Li, Xuehai Zhou, Yunji Chen</span>.
-                "AI Computing Systems for Large Language Models Training," in 
-                <span class="venue">JOURNAL OF COMPUTER SCIENCE AND TECHNOLOGY</span>, vol.40, no.1, pp.6-41, Jan. 2025.
-                <span class="highlight">（计算机系统/高性能计算，CCF B）</span>
-            </li>
-            <li class="paper-item">
-                <span class="authors">Bi Jun, Qi Guo, <span class="self">Xiaqing Li</span>, Yongwei Zhao, Yuanbo Wen, Yuxuan Guo, Enshuai Zhou, Xing Hu, Zidong Du, Ling Li, Huaping Chen, Tianshi Chen</span>.
-                "Heron: Automatically Constrained High-performance Library Generation for Deep Learning Accelerators," 
-                <span class="venue">Proceedings of the 28th Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS'23)</span>, in Canada, Volume 3: 314-328.
-                <span class="highlight">（计算机系统/高性能计算，CCF A）</span>
-            </li>
-            <li class="paper-item">
-                <span class="authors">Hongrui Guo, Yongwei Zhao, Zhangmai Li, Yifan Hao, Tianrui Ma, Mo Zou, Chang Liu, Xinkai Song, <span class="self">Xiaqing Li</span>, Zidong Du, Rui Zhang, Qi Guo, Zhiwei Xu, Tianshi Chen</span>.
-                "A Systolic Random Increment Memory Architecture for Unary Computing," in 
-                <span class="venue">IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems</span>, pp.1-1, 2026.
-                <span class="highlight">（计算机系统/高性能计算，CCF A）</span>
-            </li>
-            <li class="paper-item">
-                <span class="authors">Chongxiao Li, Di Huang, Pengwei Jin, Tianyun Ma, Husheng Han, Shuyao Cheng, Yifan Hao, Yongwei Zhao, Guanglin Xu, Zidong Du, Rui Zhang, <span class="self">Xiaqing Li</span>, Yuanbo Wen, Xing Hu, Qi Guo</span>.
-                "AGON: Automated Design Framework for Customizing Processors From ISA Documents," in 
-                <span class="venue">IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems</span>, vol.45, no.5, pp.2362-2375, 2026.
-                <span class="highlight">（计算机系统/高性能计算，CCF A）</span>
-            </li>
-            <li class="paper-item">
-                <span class="authors">Haochen Li, Rui Zhang, Hantao Yao, Xin Zhang, Yifan Hao, Xinkai Song, <span class="self">Xiaqing Li</span>, Yongwei Zhao, Yunji Chen, Ling Li</span>.
-                "DA-Ada: Learning Domain-Aware Adapter for Domain Adaptive Object Detection," 
-                <span class="venue">Advances in Neural Information Processing Systems 37 (NeurIPS)</span>, 2024.
-                <span class="highlight">（计算机系统/高性能计算，CCF A）</span>
-            </li>
-            <li class="paper-item">
-                <span class="authors">Yi Chen, Yongwei Zhao, Yifan Hao, Yuntao Dai, Yang Liu, Rui Zhang, Mo Zou, Yuanbo Wen, Xinkai Song, <span class="self">Xiaqing Li</span>, Xing Hu, Zidong Du, Huaping Chen, Qi Guo, Tianshi Chen</span>.
-                "EMP: Efficient 4-bit Matrix Unit via Primitivization," 
-                <span class="venue">The 57th ACM/IEEE International Symposium on Microarchitecture (MICRO 2024)</span>.
-                <span class="highlight">（计算机系统/高性能计算，CCF A）</span>
-            </li>
-            <li class="paper-item">
-                <span class="authors">Husheng Han, Xinyao Zheng, Yifan Hao, Ling Liang, Erhu Feng, Jianan Mu, <span class="self">Xiaqing Li</span>, Tianyun Ma, Pengwei Jin, Yuanbo Wen, Xinkai Song, Zidong Du, Qi Guo, Xing Hu</span>.
-                "TensorTEE: Unified Granularity Heterogeneous TEE for Efficient Secure Collaborative Computing," 
-                <span class="venue">Proceedings of the 28th Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS'24)</span>.
-                <span class="highlight">（计算机系统/高性能计算，CCF A）</span>
-            </li>
-            <li class="paper-item">
-                <span class="authors">Shuyao Cheng, Chongxiao Li, Zidong Du, Rui Zhang, Xing Hu, <span class="self">Xiaqing Li</span>, Guanglin Xu, Yuanbo Wen, Qi Guo</span>.
-                "Revisiting Automatic Pipelining: Gate-level Forwarding and Speculation," 
-                <span class="venue">Design Automation Conference 2024 (DAC'24)</span>, July 2024.
-                <span class="highlight">（计算机系统/高性能计算，CCF A）</span>
-            </li>
-            <li class="paper-item">
-                <span class="authors">Weihao Kong, Yifan Hao, Yongwei Zhao, Xinkai Song, <span class="self">Xiaqing Li</span>, Mo Zou, Rui Zhang, Xing Hu, Wei Li, Zidong Du, Qi Guo, Zhiwei Xu, Tianshi Chen</span>.
-                "DiffBoost: Full-Network Differential Acceleration for Diffusion Models," 
-                <span class="venue">The 51st Annual International Symposium on Computer Architecture 2024 (ISCA '24)</span>.
-                <span class="highlight">（计算机系统/高性能计算，CCF A）</span>
-            </li>
-            <li class="paper-item">
-                <span class="authors">Hongrui Guo, Yongwei Zhao, Zhangmai Li, Yifan Hao, Chang Liu, Xinkai Song, <span class="self">Xiaqing Li</span>, Zidong Du, Rui Zhang, Qi Guo, Tianshi Chen, Zhiwei Xu</span>.
-                "Cambricon-U: A Systolic Random Increment Memory Architecture for Unary Computing," 
-                <span class="venue">The 56th ACM/IEEE International Symposium on Microarchitecture (MICRO 2023)</span>.
-                <span class="highlight">（计算机系统/高性能计算，CCF A）</span>
-            </li>
-            <li class="paper-item">
-                <span class="authors">Yifan Hao, Yongwei Zhao, Chenxiao Liu, Zidong Du, Shuyao Cheng, <span class="self">Xiaqing Li</span>, Xing Hu, Qi Guo, Zhiwei Xu, Tianshi Chen</span>.
-                "Cambricon-P: A Bitflow Architecture for Arbitrary Precision Computing," 
-                <span class="venue">The 55th ACM/IEEE International Symposium on Microarchitecture (MICRO 2022)</span>.
-                <span class="highlight">（计算机系统/高性能计算，CCF A）</span>
-            </li>
-            <li class="paper-item">
-                <span class="authors">Yuanbo Wen, Qi Guo, Qiang Fu, <span class="self">Xiaqing Li</span>, Jianxing Xu, Yanlin Tang, Yongwei Zhao, Xing Hu, Zidong Du, Ling Li, Chao Wang, Xuehai Zhou, Yunji Chen</span>.
-                "BabelTower: Learning to Auto-parallelized Program Translation," 
-                <span class="venue">International Conference on Machine Learning (ICML)</span>, July 2022.
-                <span class="highlight">（计算机系统/高性能计算，CCF A）</span>
-            </li>
-            <li class="paper-item">
-                <span class="authors">Bao Zhenshan, Guo Junnan, <span class="self">Xiaqing Li</span>, Zhang Wenbo</span>.
-                "MSCU: Accelerating CNN Inference with Multiple Sizes of Compute Unit on FPGAs," 
-                <span class="venue">IEEE MCSoC</span>, 2021.
-                <span class="highlight">（计算机系统/高性能计算）</span>
-            </li>
-            <li class="paper-item">
-                <span class="authors">Juan Fang, Di Zhang, <span class="self">Xiaqing Li</span></span>.
-                "ParRouting: An Efficient Area Partition-Based Congestion-Aware Routing Algorithm for NoCs," 
-                <span class="venue">Micromachines</span>, 2020, 11(12).
-                <span class="highlight">（计算机系统/高性能计算，SCI三区）</span>
-            </li>
-        </ul>
+        <!-- 论文不使用列表圆点，直接每个条目为独立块 -->
+        <div class="paper-item">
+            <span class="authors"><span class="self">Xiaqing Li</span>, Qi Guo, Guangyan Zhang, Siwei Ye, Guanhua He, Yiheng Yao, Yifan Hao, Zidong Du, Weimin Zheng</span>.
+            "FastTuning: Enabling Fast and Efficient Hyper-Parameter Tuning with Partitioning and Parallelism of Search Space," 
+            <span class="venue">IEEE Transactions on Parallel and Distributed Systems (TPDS)</span>, Volume:35, Issue:7, Pages:1174-1188, July 2024.
+            <span class="ccf">（计算机系统/高性能计算，CCF A）</span>
+        </div>
+        <div class="paper-item">
+            <span class="authors"><span class="self">Xiaqing Li</span>, Guangyan Zhang, Weimin Zheng</span>.
+            "SmartTuning: Selecting HyperParameters of a ConvNet System for Fast Training and Small Working Memory," 
+            <span class="venue">IEEE Transactions on Parallel and Distributed Systems (TPDS)</span>, Volume: 32, Issue: 7, Pages: 1690-1701, July 2021.
+            <span class="ccf">（计算机系统/高性能计算，CCF A）</span>
+        </div>
+        <div class="paper-item">
+            <span class="authors"><span class="self">Xiaqing Li</span>, Guangyan Zhang, Zhufan Wang, Weimin Zheng</span>.
+            "HyConv: Accelerating Multi-phase CNN Computation by Fine-grained Policy Selection," 
+            <span class="venue">IEEE Transactions on Parallel and Distributed Systems (TPDS)</span>, Volume: 30, Issue: 2, Pages: 388-399, Feb. 2019.
+            <span class="ccf">（计算机系统/高性能计算，CCF A）</span>
+        </div>
+        <div class="paper-item">
+            <span class="authors"><span class="self">Xiaqing Li</span>, Guangyan Zhang, H. Howie Huang, Zhufan Wang, Weimin Zheng</span>.
+            "Performance Analysis of GPU-based Convolutional Neural Networks," in 
+            <span class="venue">45th International Conference on Parallel Processing (ICPP-2016)</span>, Philadelphia, PA USA, August 2016.
+            <span class="ccf">（计算机系统/高性能计算，CCF B）</span>
+        </div>
+        <div class="paper-item">
+            <span class="authors"><span class="self">Xiaqing Li</span>, Guangyan Zhang, Keqin Li, Weimin Zheng</span>.
+            "Deep learning and its parallel acceleration techniques," in 
+            <span class="venue">Big Data: Principles and Paradigms</span>, Morgan Kaufmann/Elsevier, 2015.
+            <span class="ccf">（计算机系统/高性能计算）</span>
+        </div>
+        <div class="paper-item">
+            <span class="authors">Zhengyang Lyu, <span class="self">Xiaqing Li</span>, Zidong Du, Rui Zhang, Qi Guo</span>.
+            "LE-Timing: Layout-Aware and Explainable Timing Prediction," in 
+            <span class="venue">ACM Transactions on Design Automation of Electronic Systems</span>, Just Accepted, May 2026.
+            <span class="ccf">（计算机系统/高性能计算，CCF B）</span>
+        </div>
+        <div class="paper-item">
+            <span class="authors">Wenkai He, <span class="self">Xiaqing Li</span>, Xinkai Song, Yifan Hao, Rui Zhang, Zidong Du, Yunji Chen</span>.
+            "Chip design with machine learning: a survey from algorithm perspective," 
+            <span class="venue">Science China Information Science (SCIS)</span>, Oct 19, 2023.
+            <span class="ccf">（计算机系统/高性能计算，CCF A）</span>
+        </div>
+        <div class="paper-item">
+            <span class="authors">Zhengyang Lv, <span class="self">Xiaqing Li</span>, Zidong Du, Qi Guo</span>.
+            "Explainable and Layout-Aware Timing Prediction," 
+            <span class="venue">2024 ACM/IEEE International Conference on Computer-Aided Design (ICCAD-2024)</span>, Volume:35, July 2024.
+            <span class="ccf">（计算机系统/高性能计算，CCF B）</span>
+        </div>
+        <div class="paper-item">
+            <span class="authors">Jun Bi, <span class="self">Xiaqing Li</span>, Qi Guo, Rui Zhang, Yuanbo Wen, Xing Hu, Zidong Du, Xinkai Song, Yifan Hao, Yunji Chen</span>.
+            "BALTO: Efficient Tensor Program Optimization with Diversity-Based Active Learning," 
+            <span class="venue">International Conference on Learning Representations (ICLR 2023)</span>.
+            <span class="ccf">（计算机系统/高性能计算，CCF A）</span>
+        </div>
+        <div class="paper-item">
+            <span class="authors">Feiyu Yao, Zhixiong Niu, <span class="self">Xiaqing Li</span>, Yongqiang Xiong, Juan Fang, Qian Wang</span>.
+            "An Efficient Hybrid Sparse Attention with CPU-GPU Parallelism for Long-Context Inference," in 
+            <span class="venue">CoRR</span>, abs/2605.07719, 2026.
+            <span class="ccf">（计算机系统/高性能计算）</span>
+        </div>
+        <div class="paper-item">
+            <span class="authors">Jianhang Xie, Chuntao Ding, <span class="self">Xiaqing Li</span>, Shenyuan Ren, Yidong Li, Zhichao Lu</span>.
+            "NestQuant: Post-Training Integer-Nesting Quantization for On-Device DNN," 
+            <span class="venue">IEEE Transactions on Mobile Computing (TMC)</span>, 2025.
+            <span class="ccf">（计算机系统/高性能计算，CCF A）</span>
+        </div>
+        <div class="paper-item">
+            <span class="authors">Zhexing Zhang, Yuanbo Wen, Hanqi Lyu, Chang Liu, Rui Zhang, <span class="self">Xiaqing Li</span>, Chao Wang, Zidong Du, Qi Guo, Ling Li, Xuehai Zhou, Yunji Chen</span>.
+            "AI Computing Systems for Large Language Models Training," in 
+            <span class="venue">JOURNAL OF COMPUTER SCIENCE AND TECHNOLOGY</span>, vol.40, no.1, pp.6-41, Jan. 2025.
+            <span class="ccf">（计算机系统/高性能计算，CCF B）</span>
+        </div>
+        <div class="paper-item">
+            <span class="authors">Bi Jun, Qi Guo, <span class="self">Xiaqing Li</span>, Yongwei Zhao, Yuanbo Wen, Yuxuan Guo, Enshuai Zhou, Xing Hu, Zidong Du, Ling Li, Huaping Chen, Tianshi Chen</span>.
+            "Heron: Automatically Constrained High-performance Library Generation for Deep Learning Accelerators," 
+            <span class="venue">Proceedings of the 28th Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS'23)</span>, in Canada, Volume 3: 314-328.
+            <span class="ccf">（计算机系统/高性能计算，CCF A）</span>
+        </div>
+        <div class="paper-item">
+            <span class="authors">Hongrui Guo, Yongwei Zhao, Zhangmai Li, Yifan Hao, Tianrui Ma, Mo Zou, Chang Liu, Xinkai Song, <span class="self">Xiaqing Li</span>, Zidong Du, Rui Zhang, Qi Guo, Zhiwei Xu, Tianshi Chen</span>.
+            "A Systolic Random Increment Memory Architecture for Unary Computing," in 
+            <span class="venue">IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems</span>, pp.1-1, 2026.
+            <span class="ccf">（计算机系统/高性能计算，CCF A）</span>
+        </div>
+        <div class="paper-item">
+            <span class="authors">Chongxiao Li, Di Huang, Pengwei Jin, Tianyun Ma, Husheng Han, Shuyao Cheng, Yifan Hao, Yongwei Zhao, Guanglin Xu, Zidong Du, Rui Zhang, <span class="self">Xiaqing Li</span>, Yuanbo Wen, Xing Hu, Qi Guo</span>.
+            "AGON: Automated Design Framework for Customizing Processors From ISA Documents," in 
+            <span class="venue">IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems</span>, vol.45, no.5, pp.2362-2375, 2026.
+            <span class="ccf">（计算机系统/高性能计算，CCF A）</span>
+        </div>
+        <div class="paper-item">
+            <span class="authors">Haochen Li, Rui Zhang, Hantao Yao, Xin Zhang, Yifan Hao, Xinkai Song, <span class="self">Xiaqing Li</span>, Yongwei Zhao, Yunji Chen, Ling Li</span>.
+            "DA-Ada: Learning Domain-Aware Adapter for Domain Adaptive Object Detection," 
+            <span class="venue">Advances in Neural Information Processing Systems 37 (NeurIPS)</span>, 2024.
+            <span class="ccf">（计算机系统/高性能计算，CCF A）</span>
+        </div>
+        <div class="paper-item">
+            <span class="authors">Yi Chen, Yongwei Zhao, Yifan Hao, Yuntao Dai, Yang Liu, Rui Zhang, Mo Zou, Yuanbo Wen, Xinkai Song, <span class="self">Xiaqing Li</span>, Xing Hu, Zidong Du, Huaping Chen, Qi Guo, Tianshi Chen</span>.
+            "EMP: Efficient 4-bit Matrix Unit via Primitivization," 
+            <span class="venue">The 57th ACM/IEEE International Symposium on Microarchitecture (MICRO 2024)</span>.
+            <span class="ccf">（计算机系统/高性能计算，CCF A）</span>
+        </div>
+        <div class="paper-item">
+            <span class="authors">Husheng Han, Xinyao Zheng, Yifan Hao, Ling Liang, Erhu Feng, Jianan Mu, <span class="self">Xiaqing Li</span>, Tianyun Ma, Pengwei Jin, Yuanbo Wen, Xinkai Song, Zidong Du, Qi Guo, Xing Hu</span>.
+            "TensorTEE: Unified Granularity Heterogeneous TEE for Efficient Secure Collaborative Computing," 
+            <span class="venue">Proceedings of the 28th Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS'24)</span>.
+            <span class="ccf">（计算机系统/高性能计算，CCF A）</span>
+        </div>
+        <div class="paper-item">
+            <span class="authors">Shuyao Cheng, Chongxiao Li, Zidong Du, Rui Zhang, Xing Hu, <span class="self">Xiaqing Li</span>, Guanglin Xu, Yuanbo Wen, Qi Guo</span>.
+            "Revisiting Automatic Pipelining: Gate-level Forwarding and Speculation," 
+            <span class="venue">Design Automation Conference 2024 (DAC'24)</span>, July 2024.
+            <span class="ccf">（计算机系统/高性能计算，CCF A）</span>
+        </div>
+        <div class="paper-item">
+            <span class="authors">Weihao Kong, Yifan Hao, Yongwei Zhao, Xinkai Song, <span class="self">Xiaqing Li</span>, Mo Zou, Rui Zhang, Xing Hu, Wei Li, Zidong Du, Qi Guo, Zhiwei Xu, Tianshi Chen</span>.
+            "DiffBoost: Full-Network Differential Acceleration for Diffusion Models," 
+            <span class="venue">The 51st Annual International Symposium on Computer Architecture 2024 (ISCA '24)</span>.
+            <span class="ccf">（计算机系统/高性能计算，CCF A）</span>
+        </div>
+        <div class="paper-item">
+            <span class="authors">Hongrui Guo, Yongwei Zhao, Zhangmai Li, Yifan Hao, Chang Liu, Xinkai Song, <span class="self">Xiaqing Li</span>, Zidong Du, Rui Zhang, Qi Guo, Tianshi Chen, Zhiwei Xu</span>.
+            "Cambricon-U: A Systolic Random Increment Memory Architecture for Unary Computing," 
+            <span class="venue">The 56th ACM/IEEE International Symposium on Microarchitecture (MICRO 2023)</span>.
+            <span class="ccf">（计算机系统/高性能计算，CCF A）</span>
+        </div>
+        <div class="paper-item">
+            <span class="authors">Yifan Hao, Yongwei Zhao, Chenxiao Liu, Zidong Du, Shuyao Cheng, <span class="self">Xiaqing Li</span>, Xing Hu, Qi Guo, Zhiwei Xu, Tianshi Chen</span>.
+            "Cambricon-P: A Bitflow Architecture for Arbitrary Precision Computing," 
+            <span class="venue">The 55th ACM/IEEE International Symposium on Microarchitecture (MICRO 2022)</span>.
+            <span class="ccf">（计算机系统/高性能计算，CCF A）</span>
+        </div>
+        <div class="paper-item">
+            <span class="authors">Yuanbo Wen, Qi Guo, Qiang Fu, <span class="self">Xiaqing Li</span>, Jianxing Xu, Yanlin Tang, Yongwei Zhao, Xing Hu, Zidong Du, Ling Li, Chao Wang, Xuehai Zhou, Yunji Chen</span>.
+            "BabelTower: Learning to Auto-parallelized Program Translation," 
+            <span class="venue">International Conference on Machine Learning (ICML)</span>, July 2022.
+            <span class="ccf">（计算机系统/高性能计算，CCF A）</span>
+        </div>
+        <div class="paper-item">
+            <span class="authors">Bao Zhenshan, Guo Junnan, <span class="self">Xiaqing Li</span>, Zhang Wenbo</span>.
+            "MSCU: Accelerating CNN Inference with Multiple Sizes of Compute Unit on FPGAs," 
+            <span class="venue">IEEE MCSoC</span>, 2021.
+            <span class="ccf">（计算机系统/高性能计算）</span>
+        </div>
+        <div class="paper-item">
+            <span class="authors">Juan Fang, Di Zhang, <span class="self">Xiaqing Li</span></span>.
+            "ParRouting: An Efficient Area Partition-Based Congestion-Aware Routing Algorithm for NoCs," 
+            <span class="venue">Micromachines</span>, 2020, 11(12).
+            <span class="ccf">（计算机系统/高性能计算，SCI三区）</span>
+        </div>
     </div>
 
     <div class="footer">
