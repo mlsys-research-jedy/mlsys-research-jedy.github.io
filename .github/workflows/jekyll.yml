@@ -1,0 +1,6 @@
+# 在你的项目根目录下执行
+mkdir -p .github/workflows
+# 然后创建 jekyll.yml 文件并粘贴内容
+git add .github/workflows/jekyll.yml
+git commit -m "Add Jekyll Pages workflow"
+git push origin master
