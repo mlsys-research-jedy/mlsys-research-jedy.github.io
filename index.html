@@ -116,8 +116,65 @@
         .recruit-section p {
             margin-bottom: 0.6em;
         }
+        .recruit-card {
+            border: 1px solid #d7dde5;
+            border-radius: 14px;
+            margin: 12px 0 14px;
+            padding: 18px 22px;
+            background: linear-gradient(180deg, #ffffff 0%, #f6f8fb 100%);
+            box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+        }
+        .recruit-card-title {
+            margin: 0 0 10px 0;
+            font-weight: 700;
+            color: #1f2d3d;
+            font-size: 1.18em;
+            letter-spacing: 0.02em;
+            text-align: center;
+        }
+        .recruit-email-bar {
+            margin: 0 auto 12px;
+            padding: 10px 14px;
+            max-width: 560px;
+            border: 1px solid #d9e2ec;
+            border-radius: 10px;
+            background: #ffffff;
+            text-align: center;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+        }
+        .recruit-email-label {
+            font-weight: 700;
+            color: #334155;
+        }
+        .recruit-email-value {
+            font-weight: 700;
+            color: #0b4dbb;
+            text-decoration: none;
+        }
+        .recruit-card-main {
+            margin: 0;
+            font-weight: 800;
+            color: #8f1d1d;
+            font-size: 1.03em;
+            line-height: 1.75;
+            text-align: center;
+        }
+        .recruit-card-note {
+            margin: 8px 0 0 0;
+            color: #6b2b2b;
+            font-size: 0.98em;
+            line-height: 1.8;
+            font-weight: 600;
+            text-align: center;
+        }
         @media (max-width: 600px) {
             body { padding: 0 15px 0 10px; }
+            .recruit-card {
+                padding: 15px 14px;
+            }
+            .recruit-email-bar {
+                padding: 9px 12px;
+            }
             ul { padding-left: 1.2em; }
         }
     </style>
@@ -151,14 +208,15 @@
     <div class="section-title">📢 招生宣言</div>
 
     <!-- 条幅：包含 【欢迎加入本课题组】 + 带星号通知 -->
-    <div style="border: 1px solid #d7dde5; text-align: center; padding: 18px 22px; border-radius: 14px; margin: 12px 0; background: linear-gradient(180deg, #fefefe 0%, #f5f7fa 100%); box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);">
-        <p style="margin: 0 0 8px 0; font-weight: 700; color: #1f2d3d; font-size: 1.18em; letter-spacing: 0.02em;">【欢迎加入本课题组】</p>
-        <p style="margin: 0; font-weight: 800; color: #b91c1c; font-size: 1.03em; line-height: 1.75;">****欢迎2027年免试推免入学的研究生（3名）、博士生（本科直博和普博，1-2名）带简历成绩单等提前联系我****</p>
-        <p style="margin: 8px 0 0 0; color: #b91c1c; font-size: 0.98em; line-height: 1.8; font-weight: 600;">（温馨提示：免试推荐的研究生、博士生（本科直博在9月）需在大三暑假结束后报名教育部推免系统，欢迎在报名之前提前与我先取得联系和沟通。同时，也非常欢迎优秀的本科生进组开展科研工作。）</p>
+    <div class="recruit-card">
+        <p class="recruit-card-title">【欢迎加入本课题组】</p>
+        <div class="recruit-email-bar">
+            <span class="recruit-email-label">联系邮箱：</span>
+            <span class="recruit-email-value">mlsys_research@163.com</span>
+        </div>
+        <p class="recruit-card-main">****欢迎2027年免试推免入学的研究生（3名）、博士生（本科直博和普博，1-2名）带简历成绩单等提前联系我****</p>
+        <p class="recruit-card-note">（温馨提示：免试推荐的研究生、博士生（本科直博在9月）需在大三暑假结束后报名教育部推免系统，欢迎在报名之前提前与我先取得联系和沟通。同时，也非常欢迎优秀的本科生进组开展科研工作。）</p>
     </div>
-
-    <!-- 邮箱：普通正文，保持原有样式 -->
-    <p><strong>【我的邮箱： <span style="color:#0000cc;">mlsys_research@163.com</span>】</strong></p>
 
     <!-- 列表项：无黑点，仅保留编号 -->
 
