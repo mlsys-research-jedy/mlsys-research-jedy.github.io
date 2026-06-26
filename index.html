@@ -100,21 +100,7 @@
         .recruit-section strong {
             font-weight: 700;
             color: #000000;
-        }
-        .recruit-section .underline {
-            text-decoration: underline;
-            text-decoration-thickness: auto;
-            text-underline-offset: 0.12em;
-        }
-        .recruit-section .emphasis {
-            color: #0f172a;
-            font-weight: 800;
-            background: #f8fafc;
-            border: 1px solid #dbe3ee;
-            border-radius: 999px;
-            padding: 0.08em 0.55em;
-            display: inline-block;
-            box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+            text-decoration: none;
         }
         .no-underline {
             text-decoration: none;
@@ -179,12 +165,13 @@
             margin-top: 0.4em;
         }
         .recruit-list li {
-            margin-bottom: 0.8em;
-            padding: 0.85em 1em;
-            border-left: 3px solid #c7d2fe;
-            background: #fbfdff;
-            border-radius: 0 12px 12px 0;
-            box-shadow: 0 1px 0 rgba(15, 23, 42, 0.04);
+            margin-bottom: 0.7em;
+            padding-left: 0;
+            line-height: 1.8;
+        }
+        .recruit-list .item-index {
+            font-weight: 700;
+            color: #1f2937;
         }
         @media (max-width: 600px) {
             body { padding: 0 15px 0 10px; }
@@ -235,9 +222,9 @@
 
 
 <ul class="recruit-list">
-    <li><span class="emphasis">（1）</span> 如果你有志解决业界真实问题，做实用而有趣的研究，发表高水平文章，欢迎喜欢 <span class="emphasis">高性能计算、大模型计算系统</span> 等方向的同学报考我们的硕士，或本科阶段参与科研训练。我们的研究聚焦于 <span class="emphasis">AI系统优化、超参数自动调优、GPU加速技术、芯片自动化设计</span> 等前沿课题，致力于将理论创新转化为实际应用价值。</li>
-    <li><span class="emphasis">（2）</span> 我们与 <span class="emphasis">清华大学、中科院计算所</span> 等国内顶尖院所保持深度合作关系，为学生提供高水平的学术交流平台和保外、留学推荐机会。工业界与 <span class="emphasis">滴滴、清程极智、小米、华为、字节跳动、阿里巴巴</span> 等企业团队紧密合作，优秀学生将获得大厂实习和独家内推资源。</li>
-    <li><span class="emphasis">（3）</span> 我们期待踏实、认真、务实，且对冲击本领域内 <span class="emphasis">顶级会议和期刊</span> 有强烈兴趣的同学加入。无论你是 <span class="emphasis">系统方向、人工智能方向，还是体系结构方向</span> 的背景，只要对 <span class="emphasis">大规模计算系统优化</span> 充满热情，不惧零基础，都欢迎随时邮件联系我。</li>
+    <li><span class="item-index">（1）</span> 如果你有志解决业界真实问题，做实用而有趣的研究，发表高水平文章，欢迎喜欢 高性能计算、大模型计算系统 等方向的同学报考我们的硕士，或本科阶段参与科研训练。我们的研究聚焦于 AI系统优化、超参数自动调优、GPU加速技术、芯片自动化设计 等前沿课题，致力于将理论创新转化为实际应用价值。</li>
+    <li><span class="item-index">（2）</span> 我们与 清华大学、中科院计算所 等国内顶尖院所保持深度合作关系，为学生提供高水平的学术交流平台和保外、留学推荐机会。工业界与 滴滴、清程极智、小米、华为、字节跳动、阿里巴巴 等企业团队紧密合作，优秀学生将获得大厂实习和独家内推资源。</li>
+    <li><span class="item-index">（3）</span> 我们期待踏实、认真、务实，且对冲击本领域内 顶级会议和期刊 有强烈兴趣的同学加入。无论你是 系统方向、人工智能方向，还是体系结构方向 的背景，只要对 大规模计算系统优化 充满热情，不惧零基础，都欢迎随时邮件联系我。</li>
 </ul>
     
 </div>
@@ -257,24 +244,24 @@
     </div>
 
     <!-- ==================== 科研项目 ==================== -->
-    <div class="section">
+    <div class="section project-section">
         <div class="section-title">👥 科研项目</div>
         <ul>
-            <li><span class="bold">国家自然基金委面上项目</span>，大模型自动化超参数调优的扩展性研究，<span class="bold">主持</span></li>
-            <li><span class="bold">校企合作</span>，面向滴滴业务场景的大模型推理框架性能评测方法研究，<span class="bold">主持</span></li>
-            <li><span class="bold">中央高校人才基金</span>，面向高效自动化机器学习的关键技术研究，<span class="bold">主持</span></li>
-            <li><span class="bold">自然科学横向项目</span>，自动驾驶碰撞检测漏洞挖掘ICSFuzz算法开发，参与</li>
-            <li><span class="bold">自然科学横向项目</span>，智慧康养金融服务系统项目，参与</li>
-            <li><span class="bold">自然科学横向项目</span>，铁路客运电梯维保智能监测技术研究，参与</li>
-            <li><span class="bold">自然科学横向项目</span>，铁路局基于北斗时空信息服务的规模应用示范-智能化地理信息要素数据清洗研究，参与</li>
-            <li><span class="bold">自然科学横向项目</span>，数据科学课程技术支持-北京联创拓值科技有限公司，参与</li>
-            <li><span class="bold">自然科学横向项目</span>，北斗时空信息服务管理及融合应用关键技术研究，参与</li>
-            <li><span class="bold">自然科学横向项目</span>，面向异构算力的模型计算图切分方法研究，参与</li>
-            <li><span class="bold">自然科学横向项目</span>，基于可微表征技术的三维场景感知与重建研究，参与</li>
-            <li><span class="bold">国家任务</span>，xxxx设计，参与</li>
-            <li><span class="bold">战略性先导</span>，xxxx关键技术，参与</li>
-            <li><span class="bold">国家自然基金委面上项目</span>，资源全局共享的存储阵列关键技术研究，参与</li>
-            <li><span class="bold">科技部973课题</span>，网络大数据计算系统架构体系与评价方法研究，参与</li>
+            <li>国家自然基金委面上项目，大模型自动化超参数调优的扩展性研究，主持</li>
+            <li>校企合作，面向滴滴业务场景的大模型推理框架性能评测方法研究，主持</li>
+            <li>中央高校人才基金，面向高效自动化机器学习的关键技术研究，主持</li>
+            <li>自然科学横向项目，自动驾驶碰撞检测漏洞挖掘ICSFuzz算法开发，参与</li>
+            <li>自然科学横向项目，智慧康养金融服务系统项目，参与</li>
+            <li>自然科学横向项目，铁路客运电梯维保智能监测技术研究，参与</li>
+            <li>自然科学横向项目，铁路局基于北斗时空信息服务的规模应用示范-智能化地理信息要素数据清洗研究，参与</li>
+            <li>自然科学横向项目，数据科学课程技术支持-北京联创拓值科技有限公司，参与</li>
+            <li>自然科学横向项目，北斗时空信息服务管理及融合应用关键技术研究，参与</li>
+            <li>自然科学横向项目，面向异构算力的模型计算图切分方法研究，参与</li>
+            <li>自然科学横向项目，基于可微表征技术的三维场景感知与重建研究，参与</li>
+            <li>国家任务，xxxx设计，参与</li>
+            <li>战略性先导，xxxx关键技术，参与</li>
+            <li>国家自然基金委面上项目，资源全局共享的存储阵列关键技术研究，参与</li>
+            <li>科技部973课题，网络大数据计算系统架构体系与评价方法研究，参与</li>
         </ul>
     </div>
 
