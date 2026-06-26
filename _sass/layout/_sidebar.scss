@@ -321,4 +321,12 @@
       text-decoration: underline;
     }
   }
+
+  a.author__email {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
