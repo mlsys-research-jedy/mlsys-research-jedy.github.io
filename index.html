@@ -60,11 +60,11 @@
             color: #000000;   /* 设为纯黑色 */
         }
         .paper-item .authors .self {
-            font-weight: 700;
-            color: #000000;
-            text-decoration: underline;
-            text-decoration-thickness: auto;
-            text-underline-offset: 0.12em;
+            font-weight: 800;
+            color: #111827;
+            background: linear-gradient(transparent 62%, #e8eef8 62%);
+            padding: 0 0.05em;
+            border-radius: 0.12em;
         }
         .paper-item .venue {
             color: #000080;
@@ -83,35 +83,18 @@
             display: inline-block;
         }
         .bold {
-            font-weight: 700;
-            color: #000000;
-        }
-        .section:not(.recruit-section) .bold {
-            text-decoration: underline;
-            text-decoration-thickness: auto;
-            text-underline-offset: 0.12em;
-        }
-        .professional-services,
-        .professional-services * {
-            text-decoration: none !important;
-        }
-        .professional-services .bold {
-            text-decoration: none !important;
-        }
-        .project-section .bold,
-        .project-section .project-key {
-            font-weight: 700;
-            color: #000000;
-            text-decoration: none;
+            font-weight: 800;
+            color: #0f172a;
+            background: linear-gradient(transparent 62%, #e2e8f0 62%);
+            padding: 0 0.08em;
+            border-radius: 0.12em;
         }
         .recruit-section strong {
-            font-weight: 700;
-            color: #000000;
-            text-decoration: none;
-        }
-        .no-underline {
-            text-decoration: none;
-            font-weight: normal;
+            font-weight: 800;
+            color: #111827;
+            background: linear-gradient(transparent 62%, #dbeafe 62%);
+            padding: 0 0.08em;
+            border-radius: 0.12em;
         }
         .footer {
             margin-top: 2.5em;
@@ -133,74 +116,9 @@
         .recruit-section p {
             margin-bottom: 0.6em;
         }
-        .recruit-board {
-            position: relative;
-            overflow: hidden;
-            border: 1px solid #d5dbe3;
-            border-radius: 20px;
-            margin: 12px 0 14px;
-            padding: 22px 24px 18px;
-            background:
-                linear-gradient(135deg, rgba(158, 173, 190, 0.12), transparent 42%),
-                linear-gradient(180deg, #fcfcfd 0%, #f4f7fa 100%);
-            box-shadow: 0 14px 34px rgba(15, 23, 42, 0.09);
-        }
-        .recruit-board::before {
-            content: "";
-            position: absolute;
-            inset: 0 auto 0 0;
-            width: 6px;
-            background: linear-gradient(180deg, #111827 0%, #8b5e3c 100%);
-        }
-        .recruit-board .board-title {
-            margin: 0 0 10px 0;
-            font-weight: 800;
-            color: #111827;
-            font-size: 1.2em;
-            text-align: left;
-        }
-        .recruit-board .board-highlight {
-            margin: 0;
-            color: #334155;
-            font-size: 1em;
-            line-height: 1.85;
-            text-align: left;
-        }
-        .recruit-board .board-note {
-            margin: 12px 0 0 0;
-            padding-top: 10px;
-            border-top: 1px solid #e4e9ef;
-            color: #5b6472;
-            font-size: 0.95em;
-            line-height: 1.8;
-            text-align: left;
-        }
-        .recruit-list {
-            list-style: none;
-            padding-left: 0;
-            margin-top: 0.5em;
-        }
-        .recruit-list li {
-            margin-bottom: 0.85em;
-            padding: 0.9em 1em 0.9em 0.95em;
-            line-height: 1.8;
-            border: 1px solid #e4e9ef;
-            border-radius: 10px;
-            background: #fbfcfe;
-        }
-        .recruit-list .item-index {
-            font-weight: 700;
-            color: #1f2937;
-            margin-right: 0.2em;
-        }
-        .recruit-list strong {
-            font-weight: 700;
-            color: #000000;
-        }
         @media (max-width: 600px) {
             body { padding: 0 15px 0 10px; }
             ul { padding-left: 1.2em; }
-            .recruit-board { padding: 18px 16px 16px; }
         }
     </style>
 </head>
@@ -209,7 +127,7 @@
     <h1>📄 学术主页</h1>
 
     <!-- ==================== Short Biography ==================== -->
-    <div class="section project-section">
+    <div class="section">
         <div class="section-title biography-title">📖 Short Biography</div>
         <ul>
             <li><span class="bold">副教授、博导</span>，现就职于北京交通大学计算机学院和<span class="bold">交通大数据与人工智能教育部重点实验室</span>；</li>
@@ -233,22 +151,22 @@
     <div class="section-title">📢 招生宣言</div>
 
     <!-- 条幅：包含 【欢迎加入本课题组】 + 带星号通知 -->
-    <div class="recruit-board">
-        <p class="board-title">【欢迎加入本课题组】</p>
-        <p class="board-highlight">欢迎 <strong>2027年免试推免入学的研究生（3名）</strong>、<strong>博士生（本科直博和普博，1-2名）</strong> 提前联系我，并附上 <strong>简历</strong> 与 <strong>成绩单</strong>。</p>
-        <p class="board-note">（温馨提示：免试推荐的研究生、博士生（本科直博在9月）需在大三暑假结束后报名教育部推免系统，欢迎在报名之前提前与我先取得联系和沟通。同时，也非常欢迎优秀的本科生进组开展科研工作。）</p>
+    <div style="border: 1px solid #d7dde5; text-align: center; padding: 18px 22px; border-radius: 14px; margin: 12px 0; background: linear-gradient(180deg, #fefefe 0%, #f5f7fa 100%); box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);">
+        <p style="margin: 0 0 8px 0; font-weight: 700; color: #1f2d3d; font-size: 1.18em; letter-spacing: 0.02em;">【欢迎加入本课题组】</p>
+        <p style="margin: 0; font-weight: 800; color: #b91c1c; font-size: 1.03em; line-height: 1.75;">****欢迎2027年免试推免入学的研究生（3名）、博士生（本科直博和普博，1-2名）带简历成绩单等提前联系我****</p>
+        <p style="margin: 8px 0 0 0; color: #b91c1c; font-size: 0.98em; line-height: 1.8; font-weight: 600;">（温馨提示：免试推荐的研究生、博士生（本科直博在9月）需在大三暑假结束后报名教育部推免系统，欢迎在报名之前提前与我先取得联系和沟通。同时，也非常欢迎优秀的本科生进组开展科研工作。）</p>
     </div>
 
     <!-- 邮箱：普通正文，保持原有样式 -->
-    <p class="no-underline">【我的邮箱： <span style="color:#0000cc;">mlsys_research@163.com</span>】</p>
+    <p><strong>【我的邮箱： <span style="color:#0000cc;">mlsys_research@163.com</span>】</strong></p>
 
     <!-- 列表项：无黑点，仅保留编号 -->
 
 
-<ul class="recruit-list">
-    <li><span class="item-index">（1）</span> 如果你有志解决业界真实问题，做实用而有趣的研究，发表高水平文章，欢迎喜欢 <strong>高性能计算、大模型计算系统</strong> 等方向的同学报考我们的硕士，或本科阶段参与科研训练。我们的研究聚焦于 <strong>AI系统优化、超参数自动调优、GPU加速技术、芯片自动化设计</strong> 等前沿课题，致力于将理论创新转化为实际应用价值。</li>
-    <li><span class="item-index">（2）</span> 我们与 <strong>清华大学、中科院计算所</strong> 等国内顶尖院所保持深度合作关系，为学生提供高水平的学术交流平台和保外、留学推荐机会。工业界与 <strong>滴滴、清程极智、小米、华为、字节跳动、阿里巴巴</strong> 等企业团队紧密合作，优秀学生将获得大厂实习和独家内推资源。</li>
-    <li><span class="item-index">（3）</span> 我们期待踏实、认真、务实，且对冲击本领域内 <strong>顶级会议和期刊</strong> 有强烈兴趣的同学加入。无论你是 <strong>系统方向、人工智能方向，还是体系结构方向</strong> 的背景，只要对 <strong>大规模计算系统优化</strong> 充满热情，不惧零基础，都欢迎随时邮件联系我。</li>
+<ul>
+    <li><strong>（1）</strong> 如果你有志解决业界真实问题，做实用而有趣的研究，发表高水平文章，欢迎喜欢 <strong style="color:black; font-weight:bold;">高性能计算、大模型计算系统</strong> 等方向的同学报考我们的硕士，或本科阶段参与科研训练。我们的研究聚焦于 <strong style="color:black; font-weight:bold;">AI系统优化、超参数自动调优、GPU加速技术、芯片自动化设计</strong> 等前沿课题，致力于将理论创新转化为实际应用价值。</li>
+    <li><strong>（2）</strong> 我们与 <strong style="color:black; font-weight:bold;">清华大学、中科院计算所</strong> 等国内顶尖院所保持深度合作关系，为学生提供高水平的学术交流平台和保外、留学推荐机会。工业界与 <strong style="color:black; font-weight:bold;">滴滴、清程极智、小米、华为、字节跳动、阿里巴巴</strong> 等企业团队紧密合作，优秀学生将获得大厂实习和独家内推资源。</li>
+    <li><strong>（3）</strong> 我们期待踏实、认真、务实，且对冲击本领域内 <strong style="color:black; font-weight:bold;">顶级会议和期刊</strong> 有强烈兴趣的同学加入。无论你是 <strong style="color:black; font-weight:bold;">系统方向、人工智能方向，还是体系结构方向</strong> 的背景，只要对 <strong style="color:black; font-weight:bold;">大规模计算系统优化</strong> 充满热情，不惧零基础，都欢迎随时邮件联系我。</li>
 </ul>
     
 </div>
@@ -268,24 +186,24 @@
     </div>
 
     <!-- ==================== 科研项目 ==================== -->
-    <div class="section project-section">
+    <div class="section">
         <div class="section-title">👥 科研项目</div>
         <ul>
-            <li><span class="project-key">国家自然基金委面上项目</span>，大模型自动化超参数调优的扩展性研究，<span class="project-key">主持</span></li>
-            <li><span class="project-key">校企合作</span>，面向滴滴业务场景的大模型推理框架性能评测方法研究，<span class="project-key">主持</span></li>
-            <li><span class="project-key">中央高校人才基金</span>，面向高效自动化机器学习的关键技术研究，<span class="project-key">主持</span></li>
-            <li><span class="project-key">自然科学横向项目</span>，自动驾驶碰撞检测漏洞挖掘ICSFuzz算法开发，参与</li>
-            <li><span class="project-key">自然科学横向项目</span>，智慧康养金融服务系统项目，参与</li>
-            <li><span class="project-key">自然科学横向项目</span>，铁路客运电梯维保智能监测技术研究，参与</li>
-            <li><span class="project-key">自然科学横向项目</span>，铁路局基于北斗时空信息服务的规模应用示范-智能化地理信息要素数据清洗研究，参与</li>
-            <li><span class="project-key">自然科学横向项目</span>，数据科学课程技术支持-北京联创拓值科技有限公司，参与</li>
-            <li><span class="project-key">自然科学横向项目</span>，北斗时空信息服务管理及融合应用关键技术研究，参与</li>
-            <li><span class="project-key">自然科学横向项目</span>，面向异构算力的模型计算图切分方法研究，参与</li>
-            <li><span class="project-key">自然科学横向项目</span>，基于可微表征技术的三维场景感知与重建研究，参与</li>
-            <li><span class="project-key">国家任务</span>，xxxx设计，参与</li>
-            <li><span class="project-key">战略性先导</span>，xxxx关键技术，参与</li>
-            <li><span class="project-key">国家自然基金委面上项目</span>，资源全局共享的存储阵列关键技术研究，参与</li>
-            <li><span class="project-key">科技部973课题</span>，网络大数据计算系统架构体系与评价方法研究，参与</li>
+            <li><span class="bold">国家自然基金委面上项目</span>，大模型自动化超参数调优的扩展性研究，<span class="bold">主持</span></li>
+            <li><span class="bold">校企合作</span>，面向滴滴业务场景的大模型推理框架性能评测方法研究，<span class="bold">主持</span></li>
+            <li><span class="bold">中央高校人才基金</span>，面向高效自动化机器学习的关键技术研究，<span class="bold">主持</span></li>
+            <li><span class="bold">自然科学横向项目</span>，自动驾驶碰撞检测漏洞挖掘ICSFuzz算法开发，参与</li>
+            <li><span class="bold">自然科学横向项目</span>，智慧康养金融服务系统项目，参与</li>
+            <li><span class="bold">自然科学横向项目</span>，铁路客运电梯维保智能监测技术研究，参与</li>
+            <li><span class="bold">自然科学横向项目</span>，铁路局基于北斗时空信息服务的规模应用示范-智能化地理信息要素数据清洗研究，参与</li>
+            <li><span class="bold">自然科学横向项目</span>，数据科学课程技术支持-北京联创拓值科技有限公司，参与</li>
+            <li><span class="bold">自然科学横向项目</span>，北斗时空信息服务管理及融合应用关键技术研究，参与</li>
+            <li><span class="bold">自然科学横向项目</span>，面向异构算力的模型计算图切分方法研究，参与</li>
+            <li><span class="bold">自然科学横向项目</span>，基于可微表征技术的三维场景感知与重建研究，参与</li>
+            <li><span class="bold">国家任务</span>，xxxx设计，参与</li>
+            <li><span class="bold">战略性先导</span>，xxxx关键技术，参与</li>
+            <li><span class="bold">国家自然基金委面上项目</span>，资源全局共享的存储阵列关键技术研究，参与</li>
+            <li><span class="bold">科技部973课题</span>，网络大数据计算系统架构体系与评价方法研究，参与</li>
         </ul>
     </div>
 
@@ -504,7 +422,7 @@
 </html>
 
 <!-- ==================== Professional Services ==================== -->
-<div class="section professional-services">
+<div class="section">
     <div class="section-title">👥 Professional Services</div>
 
     <div style="margin-bottom: 0.8em;">

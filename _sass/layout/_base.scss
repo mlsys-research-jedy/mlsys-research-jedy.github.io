@@ -66,9 +66,8 @@ p {
 
 u,
 ins {
-  text-decoration: underline;
-  text-decoration-thickness: auto;
-  text-underline-offset: auto;
+  text-decoration: none;
+  border-bottom: 1px solid var(--global-text-color);
   a {
     color: inherit;
   }
