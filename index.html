@@ -112,79 +112,159 @@
             color: #888;
             text-align: center;
         }
-        /* 招生宣言：去掉黑点，保留编号 */
-        .recruit-section ul {
-            list-style-type: none;
-            padding-left: 1.2em;
+        /* ==================== 招生宣言：深色头部 + 名额表格 ==================== */
+        .recruit-section .cD {
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #0f2238;
+            box-shadow: 0 12px 30px rgba(11, 31, 51, 0.16);
         }
-        .recruit-section ul li {
-            margin-bottom: 0.6em;
-            padding-left: 0;
+        .recruit-section .cD-head {
+            background: linear-gradient(135deg, #0b1f33, #14324f 55%, #1c4a6e);
+            color: #fff;
+            padding: 1.35em 1.5em;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 1em;
+            flex-wrap: wrap;
         }
-        .recruit-section p {
-            margin-bottom: 0.6em;
+        .recruit-section .cD-head h3 {
+            font-family: "SimHei", "黑体", sans-serif;
+            font-size: 1.3em;
+            letter-spacing: 0.03em;
+            margin: 0;
         }
-        .recruit-card {
-            border: 1px solid #d7dde5;
-            border-radius: 14px;
-            margin: 12px 0 14px;
-            padding: 18px 22px;
-            background: linear-gradient(180deg, #ffffff 0%, #f6f8fb 100%);
-            box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+        .recruit-section .cD-head p {
+            color: #c7d6e6;
+            font-size: 0.93em;
+            margin: 0.35em 0 0 0;
         }
-        .recruit-card-title {
-            margin: 0 0 10px 0;
+        .recruit-section .mailchip {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(255, 255, 255, 0.28);
+            border-radius: 8px;
+            padding: 0.45em 0.9em;
+            color: #fff;
             font-weight: 700;
-            color: #1f2d3d;
-            font-size: 1.18em;
-            letter-spacing: 0.02em;
-            text-align: center;
+            white-space: nowrap;
         }
-        .recruit-email-bar {
-            margin: 0 auto 12px;
-            padding: 10px 14px;
-            max-width: 560px;
-            border: 1px solid #d9e2ec;
-            border-radius: 10px;
-            background: #ffffff;
-            text-align: center;
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+        .recruit-section .cD-body {
+            background: #fff;
+            padding: 1.1em 1.5em 1.25em;
         }
-        .recruit-email-label {
+        .recruit-section .lead {
+            font-weight: 800;
+            color: #0f172a;
+            line-height: 1.8;
+            margin-bottom: 0.7em;
+        }
+        .recruit-section .note3 {
+            background: #fff;
+            border: 1px dashed #cbd5e1;
+            border-left: 3px solid #64748b;
+            border-radius: 0 10px 10px 0;
+            padding: 0.65em 1em;
+            margin-bottom: 0.4em;
+            color: #475569;
+            line-height: 1.85;
+        }
+        .recruit-section .note3 b {
+            color: #0f172a;
+            font-weight: 800;
+            border-bottom: 1px solid #94a3b8;
+            padding-bottom: 1px;
+        }
+        .recruit-section .cD-cols {
+            display: grid;
+            grid-template-columns: 15em 1fr;
+            gap: 1.4em;
+            margin-top: 1em;
+        }
+        .recruit-section .quota {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .recruit-section .quota caption {
+            caption-side: top;
+            text-align: left;
+            font-family: "SimHei", "黑体", sans-serif;
+            font-size: 0.98em;
+            color: #334155;
+            padding-bottom: 0.45em;
+        }
+        .recruit-section .quota th {
+            background: #0f2c5c;
+            color: #fff;
             font-weight: 700;
+            text-align: left;
+            padding: 0.55em 0.75em;
+        }
+        .recruit-section .quota th:last-child,
+        .recruit-section .quota td:last-child {
+            text-align: right;
+        }
+        .recruit-section .quota td {
+            padding: 0.55em 0.75em;
+            border-bottom: 1px solid #e8eef5;
             color: #334155;
         }
-        .recruit-email-value {
-            font-weight: 700;
-            color: #0b4dbb;
-            text-decoration: none;
+        .recruit-section .quota tbody tr:nth-child(even) {
+            background: #f8fafc;
         }
-        .recruit-card-main {
-            margin: 0;
+        .recruit-section .quota tbody tr:last-child td {
+            border-bottom: 0;
+        }
+        .recruit-section .quota .vl {
             font-weight: 800;
-            color: #8f1d1d;
-            font-size: 1.03em;
-            line-height: 1.75;
-            text-align: center;
+            color: #1d4ed8;
         }
-        .recruit-card-note {
-            margin: 8px 0 0 0;
-            color: #6b2b2b;
-            font-size: 0.98em;
-            line-height: 1.8;
-            font-weight: 600;
-            text-align: center;
+        .recruit-section .pts {
+            display: grid;
+            gap: 0;
+        }
+        .recruit-section .pt {
+            display: grid;
+            grid-template-columns: 2em 1fr;
+            gap: 0.9em;
+            padding: 0.75em 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+        .recruit-section .pt:first-child {
+            padding-top: 0;
+        }
+        .recruit-section .pt:last-child {
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
+        .recruit-section .pt .n {
+            font-family: "SimHei", "黑体", sans-serif;
+            font-weight: 700;
+            color: #1c4a6e;
+        }
+        .recruit-section strong.k {
+            color: #111827;
+            background: #eff6ff;
+            border-radius: 6px;
+            padding: 0.05em 0.28em;
+            font-weight: 800;
         }
         @media (max-width: 600px) {
             body { padding: 0 15px 0 10px; }
             .section {
                 padding: 0.95em 0.9em 1em;
             }
-            .recruit-card {
-                padding: 15px 14px;
+            .recruit-section .cD-head {
+                padding: 1.1em 1.1em;
             }
-            .recruit-email-bar {
-                padding: 9px 12px;
+            .recruit-section .cD-body {
+                padding: 0.95em 1.1em 1.1em;
+            }
+            .recruit-section .cD-cols {
+                grid-template-columns: 1fr;
+                gap: 1em;
             }
             ul { padding-left: 1.2em; }
         }
@@ -218,31 +298,38 @@
 <div class="section recruit-section">
     <div class="section-title">📢 招生宣言</div>
 
-    <!-- 条幅：包含 【欢迎加入本课题组】 + 带星号通知 -->
-    <div class="recruit-card">
-        <p class="recruit-card-title">【欢迎加入本课题组】</p>
-        <div class="recruit-email-bar">
-            <span class="recruit-email-label">联系邮箱：</span>
-            <span class="recruit-email-value">mlsys_research@163.com</span>
+    <div class="cD">
+        <div class="cD-head">
+            <div>
+                <h3>【欢迎加入本课题组】</h3>
+                <p>大模型推理系统 · 高性能计算 · 计算机体系结构</p>
+            </div>
+            <div class="mailchip">mlsys_research@163.com</div>
         </div>
-        <p class="recruit-card-main">****欢迎2027年免试推免入学的研究生（3名）、博士生（本科直博和普博，1-2名）带简历成绩单等提前联系我****</p>
-        <p class="recruit-card-note">（温馨提示：免试推荐的研究生、博士生（本科直博在9月）需在大三暑假结束后报名教育部推免系统，欢迎在报名之前提前与我先取得联系和沟通。同时，也非常欢迎优秀的本科生进组开展科研工作。）</p>
+        <div class="cD-body">
+            <div class="lead">欢迎2027年免试推免入学的研究生（3–5名）、博士生（本科直博和普博，1-2名）带简历成绩单等提前联系我。</div>
+            <div class="note3">温馨提示：免试推荐的<b>研究生、博士生</b>（本科直博在<b>9月</b>）需在大三暑假结束后报名<b>教育部推免系统</b>，欢迎在报名之前提前与我先取得联系和沟通。同时，也非常欢迎优秀的本科生进组开展科研工作。</div>
+            <div class="cD-cols">
+                <table class="quota">
+                    <caption>2027 级招生名额</caption>
+                    <thead><tr><th>类别</th><th>名额</th></tr></thead>
+                    <tbody>
+                        <tr><td>硕士研究生</td><td><span class="vl">3–5 名</span></td></tr>
+                        <tr><td>博士（直博/普博）</td><td><span class="vl">1–2 名</span></td></tr>
+                        <tr><td>本科生科研</td><td><span class="vl">若干</span></td></tr>
+                    </tbody>
+                </table>
+                <div class="pts">
+                    <div class="pt"><span class="n">01</span><div>如果你有志解决业界真实问题，做实用而有趣的研究，发表高水平文章，欢迎喜欢 <strong class="k">高性能计算、大模型推理系统</strong> 等方向的同学报考我们的硕士或博士，或本科阶段参与科研训练。我们的研究聚焦于 <strong class="k">大模型推理系统优化、GPU与国产芯片加速技术、超参数自动调优、芯片自动化设计</strong> 等前沿课题，致力于将理论创新转化为实际应用价值。</div></div>
+                    <div class="pt"><span class="n">02</span><div>我们与 <strong class="k">清华大学、中科院计算所</strong> 等国内顶尖院所保持深度合作关系，为学生提供高水平的学术交流平台和保外、留学推荐机会。工业界与 <strong class="k">滴滴、清程极智、小米、华为、字节跳动、阿里巴巴</strong> 等企业团队紧密合作，优秀学生将获得大厂实习和独家内推资源。</div></div>
+                    <div class="pt"><span class="n">03</span><div>我们期待踏实、认真、务实，且对冲击本领域内 <strong class="k">顶级会议和期刊</strong> 有强烈兴趣的同学加入。无论你是 <strong class="k">系统方向、人工智能方向，还是体系结构方向</strong> 的背景，只要对 <strong class="k">大模型推理系统</strong> 充满热情，不惧零基础，都欢迎随时邮件联系我。</div></div>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <!-- 列表项：无黑点，仅保留编号 -->
-
-
-<ul>
-    <li><strong>（1）</strong> 如果你有志解决业界真实问题，做实用而有趣的研究，发表高水平文章，欢迎喜欢 <strong style="color:black; font-weight:bold;">高性能计算、大模型推理系统</strong> 等方向的同学报考我们的硕士或博士，或本科阶段参与科研训练。我们的研究聚焦于 <strong style="color:black; font-weight:bold;">大模型推理系统优化、GPU与国产芯片加速技术、超参数自动调优、芯片自动化设计</strong> 等前沿课题，致力于将理论创新转化为实际应用价值。</li>
-    <li><strong>（2）</strong> 我们与 <strong style="color:black; font-weight:bold;">清华大学、中科院计算所</strong> 等国内顶尖院所保持深度合作关系，为学生提供高水平的学术交流平台和保外、留学推荐机会。工业界与 <strong style="color:black; font-weight:bold;">滴滴、清程极智、小米、华为、字节跳动、阿里巴巴</strong> 等企业团队紧密合作，优秀学生将获得大厂实习和独家内推资源。</li>
-    <li><strong>（3）</strong> 我们期待踏实、认真、务实，且对冲击本领域内 <strong style="color:black; font-weight:bold;">顶级会议和期刊</strong> 有强烈兴趣的同学加入。无论你是 <strong style="color:black; font-weight:bold;">系统方向、人工智能方向，还是体系结构方向</strong> 的背景，只要对 <strong style="color:black; font-weight:bold;">大模型推理系统</strong> 充满热情，不惧零基础，都欢迎随时邮件联系我。</li>
-</ul>
-    
 </div>
 
-    
-
-    <!-- ==================== Recent Rewards ==================== -->
+<!-- ==================== Recent Rewards ==================== -->
     <div class="section">
         <div class="section-title">🏅 Recent Rewards</div>
         <ul>
